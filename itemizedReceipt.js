@@ -5,11 +5,20 @@
 
 
 
+function logReceipt(...listItems){
+  let totalPrice = 0;
+  listItems.forEach((listItems) => {
+    console.log(`${listItems.descr} : \$${listItems.price}`);
+    totalPrice += listItems.price;
+ })
+  console.log(`Total : $${totalPrice}`);
+ }
+
 // Check
 logReceipt(
   { descr: 'Burrito', price: 5.99 },
   { descr: 'Chips & Salsa', price: 2.99 },
-  { descr: 'Sprite', price: 1.99 }
+  { descr: 'Sprite', price: 1.99 },
 );
 // should log something like:
 // Burrito - $5.99
